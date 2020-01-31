@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="Ru-ru">
+  <head>
+    <meta charset="UTF-8"/>
+    <title>Личный Бренд Платформа</title>
+    <meta http-equiv="x-ua-compatible" content="ie=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <link rel="stylesheet" href="css/style.css"/>
+    <link rel="stylesheet" href="css/links-page.css"/>
+    <link rel="apple-touch-icon" sizes="57x57" href="img/favicon/apple-icon-57x57.png"/>
+    <link rel="apple-touch-icon" sizes="60x60" href="img/favicon/apple-icon-60x60.png"/>
+    <link rel="apple-touch-icon" sizes="72x72" href="img/favicon/apple-icon-72x72.png"/>
+    <link rel="apple-touch-icon" sizes="76x76" href="img/favicon/apple-icon-76x76.png"/>
+    <link rel="apple-touch-icon" sizes="114x114" href="img/favicon/apple-icon-114x114.png"/>
+    <link rel="apple-touch-icon" sizes="120x120" href="img/favicon/apple-icon-120x120.png"/>
+    <link rel="apple-touch-icon" sizes="144x144" href="img/favicon/apple-icon-144x144.png"/>
+    <link rel="apple-touch-icon" sizes="152x152" href="img/favicon/apple-icon-152x152.png"/>
+    <link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-icon-180x180.png"/>
+    <link rel="icon" type="image/png" sizes="192x192" href="img/favicon/android-icon-192x192.png"/>
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon/favicon-32x32.png"/>
+    <link rel="icon" type="image/png" sizes="96x96" href="img/favicon/favicon-96x96.png"/>
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon-16x16.png"/>
+    <link rel="manifest" href="img/favicon/manifest.json"/>
+<!--    <meta name="msapplication-TileColor" content="#fff"/>
+    <meta name="msapplication-TileImage" content="img/favicon/ms-icon-144x144.png"/>
+    <meta name="theme-color" content="#fff"/>
+    <meta name="description" content="Описание"/>
+    <meta name="keywords" content="Ключевые слова через запятую"/>
+    <link rel="image_src" href="https://site.com/img/og/og.jpg"/>
+    <meta property="og:type" content="website"/>
+    <meta property="og:url" content="https://..."/>
+    <meta property="og:image" content="https://.../img/og/og.jpg"/>
+    <meta property="og:image:type" content="image/jpeg"/>
+    <meta property="og:image:width" content="1024"/>
+    <meta property="og:image:height" content="512"/>
+    <meta property="og:title" content="..."/>
+    <meta property="og:description" content="..."/>
+    <meta property="og:locale" content="Ru-ru"/>
+    <meta property="og:site_name" content="https://..."/>
+    <meta name="twitter:card" content="summary_large_image"/>
+    <meta name="twitter:site" content="https://..."/>
+    <meta name="twitter:title" content="..."/>
+    <meta name="twitter:description" content="..."/>
+    <meta name="twitter:creator" content="..."/>
+    <meta name="twitter:image:src" content="https://.../img/og/twitter.jpg"/>
+    <meta name="twitter:domain" content="https://...."/>-->
+    <meta name="theme-color" content="#755ea2"/>
+    <meta name="msapplication-navbutton-color" content="#755ea2"/>
+    <meta name="apple-mobile-web-app-status-bar-style" content="#755ea2"/>
+  </head>
+  <body><!--[if lt IE 8]>
+  <p class="browserhappy">
+    Ваш браузер <strong>устарел</strong>. Пожалуйста <a href="https://browsehappy.com/"  target="_blank">обновите</a>.
+  </p>
+<![endif]-->
+<noscript>
+  <p class="intro">
+  	Вам нужно включить JavaScript в своем браузере, чтобы  отображение этой страницы было корректн
+  </p>
+</noscript>
+
+    <div class="wrapper">     
+      <main class="main"><main class="sign">
+  <a href="/" class="sign__logo"><img src="img/pic/short-logo.png" alt="ShortWayToPay"></a>
+  <div class="sign__blc">
+    <div class="sign__header">
+      <h2 class="sign__title">Настройка Личного Бренда</h2>
+    </div>
+    <form action="https://admapi.itsinsta.site/api/users/password/recover/{passwordId}/confirm" method="post" class="form">
+      <fieldset class="fieldset">
+        <div class="form__group">
+		  <label class="label">
+			<span class="label__legend">Придумайте пароль</span>
+		    <input name="password" type="password" class="input">
+		  	<div class="error"></div>
+		  </label>
+          <button class="btn show-pass js-show-hide-pass" type="button"></button>
+        </div>
+      </fieldset>
+      <button class="btn btn_viol submit" type="submit">Приступить</button>
+      <div class="sign__footer">
+        <a href="login.html">Войти</a>
+        <a href="reset.html">Запросить заново</a>
+      </div>
+    </form>
+  </div>
+</main>
+      </main>
+    </div>
+    <script src="js/vendors.min.js"></script>
+    <script src="js/scripts.min.js"></script>
+
+<script type="text/javascript" >
+$(document).ready(function(){
+    var lid = getUrlParameter("lid");
+    $("form").each(function(index, element){
+      $(element).attr("action", $(element).attr("action").replace("{passwordId}", lid));
+    });
+
+    $('form').submit(function(){
+        $('form .btn').prop('disabled', true);
+
+	event.preventDefault(); //prevent default action 
+
+	$('.error').text("");
+
+	if (!$(this).find('input[name="password"]').val()) {
+	    $('.error').last().text("Пароль не может быть пустым");
+            $('form .btn').prop('disabled', false);
+
+            return false;
+        }
+
+	var post_url = $(this).attr("action"); //get form action url
+	var request_method = $(this).attr("method"); //get form GET/POST method
+	var form_data = JSON.stringify(getFormData($(this)));
+
+	var form = $(this);
+	$.ajax({
+		url : post_url,
+		type: request_method,
+                contentType: 'application/json',
+		data : form_data
+	}).done(function(response){
+                $('form .btn').text("Открываем...");
+
+                storeLogin(response);
+                setDefaultProject(function(project) { window.location.href = "./page.html?project=" + project; });
+	}).fail(function(){
+		$('.error').last().text("Запрос на восстановление пароля не действителен.");
+
+                $('form .btn').prop('disabled', false);
+	});
+
+        return false;
+    });
+});
+
+</script>
+  </body>
+</html>

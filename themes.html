@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="Ru-ru">
+  <head>
+    <meta charset="UTF-8"/>
+    <title>Личный Бренд Платформа</title>
+    <meta http-equiv="x-ua-compatible" content="ie=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <link rel="stylesheet" href="css/style.css"/>
+    <link rel="stylesheet" href="css/links-page.css"/>
+    <link rel="apple-touch-icon" sizes="57x57" href="img/favicon/apple-icon-57x57.png"/>
+    <link rel="apple-touch-icon" sizes="60x60" href="img/favicon/apple-icon-60x60.png"/>
+    <link rel="apple-touch-icon" sizes="72x72" href="img/favicon/apple-icon-72x72.png"/>
+    <link rel="apple-touch-icon" sizes="76x76" href="img/favicon/apple-icon-76x76.png"/>
+    <link rel="apple-touch-icon" sizes="114x114" href="img/favicon/apple-icon-114x114.png"/>
+    <link rel="apple-touch-icon" sizes="120x120" href="img/favicon/apple-icon-120x120.png"/>
+    <link rel="apple-touch-icon" sizes="144x144" href="img/favicon/apple-icon-144x144.png"/>
+    <link rel="apple-touch-icon" sizes="152x152" href="img/favicon/apple-icon-152x152.png"/>
+    <link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-icon-180x180.png"/>
+    <link rel="icon" type="image/png" sizes="192x192" href="img/favicon/android-icon-192x192.png"/>
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon/favicon-32x32.png"/>
+    <link rel="icon" type="image/png" sizes="96x96" href="img/favicon/favicon-96x96.png"/>
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon-16x16.png"/>
+    <link rel="manifest" href="img/favicon/manifest.json"/>
+    <meta name="msapplication-TileColor" content="#fff"/>
+    <meta name="msapplication-TileImage" content="img/favicon/ms-icon-144x144.png"/>
+    <meta name="theme-color" content="#fff"/>
+    <meta name="description" content="Личный Бренд Платформа"/>
+    <meta name="keywords" content="Личный Бренд Платформа"/>
+    <link rel="image_src" href="https://site.com/img/og/og.jpg"/>
+    <!--<meta property="og:type" content="website"/>
+    <meta property="og:url" content="https://..."/>
+    <meta property="og:image" content="https://.../img/og/og.jpg"/>
+    <meta property="og:image:type" content="image/jpeg"/>
+    <meta property="og:image:width" content="1024"/>
+    <meta property="og:image:height" content="512"/>
+    <meta property="og:title" content="..."/>
+    <meta property="og:description" content="..."/>
+    <meta property="og:locale" content="Ru-ru"/>
+    <meta property="og:site_name" content="https://..."/>
+    <meta name="twitter:card" content="summary_large_image"/>
+    <meta name="twitter:site" content="https://..."/>
+    <meta name="twitter:title" content="..."/>
+    <meta name="twitter:description" content="..."/>
+    <meta name="twitter:creator" content="..."/>
+    <meta name="twitter:image:src" content="https://.../img/og/twitter.jpg"/>
+    <meta name="twitter:domain" content="https://...."/>-->
+    <meta name="theme-color" content="#755ea2"/>
+    <meta name="msapplication-navbutton-color" content="#755ea2"/>
+    <meta name="apple-mobile-web-app-status-bar-style" content="#755ea2"/>
+  </head>
+  <body><!--[if lt IE 8]>
+  <p class="browserhappy">
+    Ваш браузер <strong>устарел</strong>. Пожалуйста <a href="https://browsehappy.com/"  target="_blank">обновите</a>.
+  </p>
+<![endif]-->
+<noscript>
+  <p class="intro">
+  	Вам нужно включить JavaScript в своем браузере, чтобы  отображение этой страницы было корректн
+  </p>
+</noscript>
+
+    <div class="wrapper">
+           <header class="header">
+  <div class="header__wrap">
+    <div class="header__bar">
+      <a href="/" class="header__logo-desc header__logo-round"><img src=""/></a>
+      <a href="/" class="header__logo-mob header__logo-round"><img src=""/></a>
+      <div class="header-list">
+        <div class="header-list__btn off-js-list-btn"><span>Мой проект</span> <!--<i class="fa fa-caret-down" aria-hidden="true">--></i></div>
+        <nav class="header-list__nav js-list-hide">
+          <div class="header-list__nav-title">Мои проекты</div>
+          <ul>
+            <li><a href="#">Мой проект</a></li>
+            <li><a href="#">Другой мой проект</a></li>
+            <li><a href="add-new-project.html" class="header-list__nav-btn">+&nbsp;&nbsp;Добавить новый проект</a></li>
+          </ul>
+        </nav>
+      </div>
+      <a href="edit.html?project={profile}" class="header__tool" title="Настроить">
+        <i class="fa fa-cogs" aria-hidden="true"></i>Настроить
+      </a>
+    </div>
+    <div class="header__bar">
+      <div class="header-list">
+        <div class="header-list__btn js-list-btn">
+          <div class="avatar"><!--тут аватарка--></div> <i class="fa fa-caret-down" aria-hidden="true"></i>
+        </div>
+        <nav class="header-list__nav header-list__nav_right js-list-hide">
+          <ul>
+            <!--<li><a href="#"><div class="avatar header-list__nav-avatar"></div>user_name</a></li>-->
+            <!--<li><a href="price.html">Цены и тарифы</a></li>-->
+            <li><a href="profile.html">Профиль</a></li>
+            <li><a href="login.html?reload=true" class="header-list__nav-btn"><i class="fa fa-sign-out" aria-hidden="true"></i>&nbsp;&nbsp;Выйти</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </div>
+</header>
+      <main class="dash">
+        <div class="dash__overlay" id="js-dash-overlay"></div>
+        <div class="container">
+          <div class="dash__wrap"><div class="skins">
+  <div class="skins__main">
+    <section class="skins__main-sec">
+      <h2 class="skins__main-sec-title">Выберите&nbsp;цветовую&nbsp;схему вашего&nbsp;будущего&nbsp;сайта</h2>
+
+      <div class="skins-slider" id="js-skins-slider">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <label class="skins-slide">
+              <input class="js-skins-checkbox" type="checkbox" hidden>
+              <span class="skins-slide__check"><i class="fa fa-check" aria-hidden="true"></i></span>
+              <figure class="skins-slide__wrap">
+                <div class="skins-slide__pic">
+                  <img src="img/pic/pink.jpg" alt="Тема 1">
+                </div>
+                <figcaption class="skins-slide__name">Выбери: тема 1</figcaption>
+              </figure>
+            </label>        
+          </div>
+          <div class="swiper-slide">
+            <label class="skins-slide">
+              <input class="js-skins-checkbox" type="checkbox" hidden>
+              <span class="skins-slide__check"><i class="fa fa-check" aria-hidden="true"></i></span>
+              <figure class="skins-slide__wrap">
+                <div class="skins-slide__pic">
+                  <img src="img/pic/marine.jpg" alt="Тема 2">
+                </div>
+                <figcaption class="skins-slide__name">Выбери: тема 2</figcaption>
+              </figure>
+            </label>        
+          </div>
+          <div class="swiper-slide">
+            <label class="skins-slide">
+              <input class="js-skins-checkbox" type="checkbox" hidden>
+              <span class="skins-slide__check"><i class="fa fa-check" aria-hidden="true"></i></span>
+              <figure class="skins-slide__wrap">
+                <div class="skins-slide__pic">
+                  <img src="img/pic/gold.jpg" alt="Тема 3">
+                </div>
+                <figcaption class="skins-slide__name">Выбери: тема 3</figcaption>
+              </figure>
+            </label>        
+          </div>
+          <div class="swiper-slide">
+            <label class="skins-slide">
+              <input class="js-skins-checkbox" type="checkbox" hidden>
+              <span class="skins-slide__check"><i class="fa fa-check" aria-hidden="true"></i></span>
+              <figure class="skins-slide__wrap">
+                <div class="skins-slide__pic">
+                  <img src="img/pic/violet.jpg" alt="Тема 4">
+                </div>
+                <figcaption class="skins-slide__name">Выбери: тема 4</figcaption>
+              </figure>
+            </label>        
+          </div>
+          <div class="swiper-slide">
+            <label class="skins-slide">
+              <input class="js-skins-checkbox" type="checkbox" hidden>
+              <span class="skins-slide__check"><i class="fa fa-check" aria-hidden="true"></i></span>
+              <figure class="skins-slide__wrap">
+                <div class="skins-slide__pic">
+                  <img src="img/pic/orange.jpg" alt="Тема 5">
+                </div>
+                <figcaption class="skins-slide__name">Выбери: тема 5</figcaption>
+              </figure>
+            </label>        
+          </div>
+          <div class="swiper-slide">
+            <label class="skins-slide">
+              <input class="js-skins-checkbox" type="checkbox" hidden>
+              <span class="skins-slide__check"><i class="fa fa-check" aria-hidden="true"></i></span>
+              <figure class="skins-slide__wrap">
+                <div class="skins-slide__pic">
+                  <img src="img/pic/black.jpg" alt="Тема 6">
+                </div>
+                <figcaption class="skins-slide__name">Выбери: тема 6</figcaption>
+              </figure>
+            </label>        
+          </div>
+          <div class="swiper-slide">
+            <label class="skins-slide">
+              <input class="js-skins-checkbox" type="checkbox" hidden>
+              <span class="skins-slide__check"><i class="fa fa-check" aria-hidden="true"></i></span>
+              <figure class="skins-slide__wrap">
+                <div class="skins-slide__pic">
+                  <img src="img/pic/red.jpg" alt="Тема 7">
+                </div>
+                <figcaption class="skins-slide__name">Выбери: тема 7</figcaption>
+              </figure>
+            </label>        
+          </div>
+          <div class="swiper-slide">
+            <label class="skins-slide">
+              <input class="js-skins-checkbox" type="checkbox" hidden>
+              <span class="skins-slide__check"><i class="fa fa-check" aria-hidden="true"></i></span>
+              <figure class="skins-slide__wrap">
+                <div class="skins-slide__pic">
+                  <img src="img/pic/green.jpg" alt="Тема 8">
+                </div>
+                <figcaption class="skins-slide__name">Выбери: тема 8</figcaption>
+              </figure>
+            </label>        
+          </div>
+          <div class="swiper-slide">
+            <label class="skins-slide">
+              <input class="js-skins-checkbox" type="checkbox" hidden>
+              <span class="skins-slide__check"><i class="fa fa-check" aria-hidden="true"></i></span>
+              <figure class="skins-slide__wrap">
+                <div class="skins-slide__pic">
+                  <img src="img/pic/sand.jpg" alt="Тема 9">
+                </div>
+                <figcaption class="skins-slide__name">Выбери: тема 9</figcaption>
+              </figure>
+            </label>        
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+</div>
+
+
+<!-- Кнопка "Применить" -->
+<button id="next" class="btn btn_viol smartpage-public" disabled>Загружаем...</button>
+          </div>
+        </div>
+      </main>
+    </div>
+    <script src="js/vendors.min.js"></script>
+    <script src="js/scripts.min.js"></script>
+
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript" >
+   (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+   m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+   (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+
+   ym(56430199, "init", {
+        clickmap:true,
+        trackLinks:true,
+        accurateTrackBounce:true,
+        webvisor:true
+   });
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/56430199" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
+
+<!-- Facebook Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '2765965856817205');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=2765965856817205&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Facebook Pixel Code -->
+
+<script type="text/javascript" >
+var project = {};
+var page = {};
+
+$(document).ready(function(){
+    var projectName = getUrlParameter("project");
+
+    if (!projectName) {
+      setDefaultProject(function(project) { window.location.href = "./themes.html?project=" + project; });
+
+      return;
+    }
+
+    $("form").each(function(index, element){
+      $(element).attr("action", $(element).attr("action").replace("{profile}", projectName));
+    });
+    $(".header__tool").each(function(index, element){
+      $(element).attr("href", $(element).attr("href").replace("{profile}", projectName));
+    });
+
+    $("#next").click(function() {
+      window.location.href = "./page.html?project=" + projectName; 
+    });
+
+    requestProject(projectName, function(response) {
+        project = response;
+
+        $(".header__logo-desc > img").attr("src", project.logoUrl);
+        $(".header__logo-mob > img").attr("src", project.logoUrl);
+        $(".header-list__btn > span").text(project.userName);
+        /*$(".smartpage-header__pic > img").attr("src", project.logoUrl);*/
+ 
+        if (project.theme) {
+            $("#next").prop('disabled', false);
+            if (!getLearningState().isMessengersOpened) {
+                $("#next").text("Настроить мессенджеры");
+            } else {
+                $("#next").text("Продолжить настройку");
+            }
+        } else {
+            $("#next").text("Нажмите на понравившуюся тему");
+        }
+
+        $(".js-skins-checkbox").each(function(index, input) {
+            var theme = $(input).parent().find("img").attr("src").replace("img/pic/", "").replace(".jpg", "").replace(".png", "");
+            var checked = project.theme == theme;
+            $(input).prop('checked', checked);
+            if (checked) {
+              initSkinsSlider(index);
+            }
+        });
+    });
+
+    setTheme = function(theme) {
+        $("#next").prop('disabled', false);
+
+        if (!getLearningState().isMessengersOpened) {
+            $("#next").text("Настроить мессенджеры");
+        } else {
+            $("#next").text("Продолжить настройку");
+        }
+
+        $.ajax({
+            url : "https://admapi.itsinsta.site/api/profiles/" + projectName,
+	    type: "PUT",
+            contentType: 'application/json',
+            data: JSON.stringify({ theme: theme }),
+            beforeSend: function (xhr) {
+                xhr.setRequestHeader("Authorization", "Bearer " + getLogin().token);
+            },
+        }).done(function(response){
+        }).fail(function(response){
+        });
+    }
+});
+</script>
+  </body>
+</html>
